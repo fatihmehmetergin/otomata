@@ -1,1 +1,2 @@
 # otomata
+ana sayfa
