@@ -1,5 +1,5 @@
 # otomata
-[class  work 7 microJ3 Parser ](https://fatihmehmetergin.github.io/otomata/cw7/cw7/microJ3.html)
+[class  work 7 (microJ3 Parser)](https://fatihmehmetergin.github.io/otomata/cw7/cw7/microJ3.html)
 
 [class work 3](https://fatihmehmetergin.github.io/otomata/Class_W3.html)
 
