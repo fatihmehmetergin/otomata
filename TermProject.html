@@ -1,44 +1,19 @@
-<html>
-
+﻿<!DOCTYPE html>
+<html lang = "en-US">
+<title>Deterministic Finite Automata</title>
 <head>
-  <div class="topbar-base topbar-v1">
-    <div class="topbar-button">Deterministic Finite Automata</div>
-  </div>
-</head>
-<body>
-    <div class="dfa-icerik">
-        <h4>        Definition of a Deterministic Finite Automaton</h4>
-        <p>A deterministic finite automaton consists of:<br><br>
-          &emsp;<strong>1.</strong>A finite set of states,often denoted Q.<br><br>
-          &emsp;<strong>2.</strong>A finite set of input symbol,often denoted ∑.<br><br>
-          &emsp;<strong>3.</strong>A transition function that takes as arguments a state and an input symbol<br> 
-          &emsp;and returns a state.The transition function will commonly be denoted δ.<br>
-          &emsp;In our informal graph representation of automata, δ was represented by<br>
-          &emsp;arcs between states and the labels on the arcs. If q is a state, and a is an<br>
-          &emsp;input symbol, then δ(q,a) is that state p such that there is an arc labeled a from q to p.^2<br><br>
-          &emsp;<strong>4.</strong>A start state, one of the states in Q.<br><br>
-          &emsp;<strong>5.</strong>A set of final or accepting states F. The set F is a subset of Q.<br>  <br>
-          A deterministic finite automaton will often be referred to by its acronym: DFA.<br>
-          The most succinct representation of a DFA is a listing of the ve components    <br>
-          above. In proofs we often talk about a DFA in "five-tuple" notation:           <br>
-          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<strong> A = (Q,&#931;, &#948;, q0,F)      </strong>                                             <br>
-          where A is the name of the DFA. Q is its set of states,∑ its input symbols,δ   <br>
-          its transition function,q0  its start state,and F its set of accepting states.
-
-        </p>
-
-      </div>
- 
- <style>
-      .topbar-base {
-        text-align: center;
-        background-color: #294E80;
-        margin-top: -8px;
-        border: 0px;
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
-      }   
-      .topbar-button {
-        padding: 9px 3px;
+	<meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+   
+<style>
+	* {
+	  box-sizing: border-box;
+	}
+	body{
+		background: rgb(240, 240, 240);
+	}
+	.topbar-button{
+		padding: 9px 3px;
         margin: 0 auto;
         font-size: 50px;
         color: rgb(240, 240, 240);
@@ -46,153 +21,147 @@
         background-color: #294E80;
         border: 0px;
         opacity: 1;
-      }
-      .dfa-icerik {
-       width: 1300px;
-       height: 580px;
-       color: #000000;
-       font-family: Inconsolata;
-       font-size: 20px;
-       font-weight: 400;
-       margin: auto;
-     }
 
-    </style>
-    <hr />
-    <style>
-        table { 
-            border-collapse: collapse; 
-            margin: 0 100px; 
-        }
-        th { 
-            color: blue; 
-            padding: 70px 250px; 
-        }
-        td { 
-            border: 1px solid rgb(0, 0, 0); 
-            padding: 100px 250px; 
-            text-align: center; 
-        }
-    </style>    
-    <table>
-            <style>
-                    table { 
-                        border-collapse: collapse; 
-                        margin: 0 100px; 
-                    }
-                    th { 
-                        color: blue; 
-                        padding: 20px 30px; 
-                    }
-                    td { 
-                        border: 1px solid blue; 
-                        padding: 20px 30px; 
-                        text-align: center; 
-                    }
-                </style>    
-    <tr><td><table>
-            <h1 id="transition-matrix">Transition Matrix</h1>
-            <tr><th>δ</th><th>d</th><th>p</th></tr> 
-            <tr><th>> A</th><td>B</td><td>X</td></tr>
-            <tr><th>* B</th><td>B</td><td>C</td></tr>
-            <tr><th>&emsp;C</th><td>D</td><td>X</td></tr>
-            <tr><th>* D</th><td>D</td><td>X</td></tr>
-            </table></td><td>
-                    <h1 id="accept-or-reject">Components</h1>
-    
-                <strong>Q={A,B,C,D} states<br> 
-                ∑={d,p} input alphabet<br>
-                s=A<br>
-                F={B,D}<br></strong>
-                            </td></tr>
-    <tr><td><h1 id="transition-diagram">Transition Diagram</h1><a href="https://hizliresim.com/pb1oA0"><img src="https://i.hizliresim.com/pb1oA0.png"></a></td><td>
-            <h1 id="accept-or-reject">Accept or Reject</h1>
-    
-        (A,dpdpd)--(B,pdpd)--(C,dpd)--(D,pd) <strong>X</strong>&emsp; REJECT<br>
-    (A,ddpdd)--(B,pddd)--(B,pdd )--(C,dd )--(D,d)--(D,ε) ACCEPT
-    
-    
-    </td></tr>
-    
-    </table>
-    
-    
-    <hr />
-
-    <h2 id=title></h2>
-
-w = <input id=input type=text value=ddpdd
-  onChange="test()"> &emsp;
-F = <input id=final type=text value=B,D
-  onChange="test()" style="width:150px">
-
-<pre id=out></pre>
-
-<hr />
-
-<pre id=sample></pre>
-
-<hr />
-
-
-<script>
-"use strict";
-function delta(q, c) { 
-    if (q=='A' && c=='d') return 'B'
-    if (q=='B' && c=='d') return 'B'
-    if (q=='B' && c=='p') return 'C' 
-    if (q=='C' && c=='d') return 'D'
-    if (q=='D' && c=='d') return 'D'
-    
-    return '';
-}
-function accept(w, F='B,D', q='A') {
-    //w: input String
-    //F: final state(s)
-    //q: current state
-    let i = 0, txt = q
-    while (i < w.length) {
-        q = delta(q, w[i])
-        if (q == '') break
-        i++; txt += " -> "+q
+	}
+	#sides {
+        margin: 0;
+        font-size: 15px;
+				
     }
-    input.selectionStart = i
-    input.selectionEnd = i+1
-    let a = (q!='' && F.includes(q))
-    return txt+'  '+(a? "Accept" : "Reject")
-}
-function test() {
-    let w = input.value, s = "  "
-    for (let c of w) s += c+"    "
-    s += '\n'+accept(w, final.value)
-    console.log(s); out.innerHTML = s
-}
+    #left {
+        float: left;
+        width: 45%;
+        overflow: hidden;
+    }
+    #right1 {
+        height: 200px;
+        float: left;
+        width: 35%;
+        overflow: hidden;
+    }
+</style>
+</head>
+<body>
+		<div class="dfa-icerik">
+				<center>
+	<div class = "topbar-button">Deterministic Finite Automata</div><br> 
+	
+			
+					<h2>        Definition of a Deterministic Finite Automaton</h2>
+					<p>A deterministic finite automaton consists of:<br><br>
+					  &emsp;<strong>1.</strong>A finite set of states,often denoted Q.<br><br>
+					  &emsp;<strong>2.</strong>A finite set of input symbol,often denoted ∑.<br><br>
+					  &emsp;<strong>3.</strong>A transition function that takes as arguments a state and an input symbol<br> 
+					  &emsp;and returns a state.The transition function will commonly be denoted δ.<br>
+					  &emsp;In our informal graph representation of automata, δ was represented by<br>
+					  &emsp;arcs between states and the labels on the arcs. If q is a state, and a is an<br>
+					  &emsp;input symbol, then δ(q,a) is that state p such that there is an arc labeled a from q to p.^2<br><br>
+					  &emsp;<strong>4.</strong>A start state, one of the states in Q.<br><br>
+					  &emsp;<strong>5.</strong>A set of final or accepting states F. The set F is a subset of Q.<br>  <br>
+					  A deterministic finite automaton will often be referred to by its acronym: DFA.<br>
+					  The most succinct representation of a DFA is a listing of the ve components    <br>
+					  above. In proofs we often talk about a DFA in "five-tuple" notation:           <br>
+					  <strong> A = (Q,&#931;, &#948;, q0,F)      </strong>                                             <br>
+					  where A is the name of the DFA. Q is its set of states,∑ its input symbols,δ   <br>
+					  its transition function,q0  its start state,and F its set of accepting states.
+			
+					</p>
+					<a href="https://hizliresim.com/XMVd5j"><img src="https://i.hizliresim.com/XMVd5j.jpg"></a>
+					<a href="https://hizliresim.com/5aPYBl"><img src="https://i.hizliresim.com/5aPYBl.jpg"></a>
 
-    title.innerText = document.title
-    sample.innerText = delta+'\n'+accept
-    test()
-</script>
+				<p>
+					<h3>Components</h3>
+					<strong>Q</strong>={s0,s1,s2,s3,s4} states<br> 
+					<strong>∑</strong>={00,11,01,10} input alphabet<br>
+						<strong>	s</strong>=s0<br>
+							<strong>	F</strong>={s1,s2,s3,s4}<br>
 
-<h1 style="font-size: 33px;">Reference</h1>
-        <a style="font-size: 22px;" href="http://ce.sharif.edu/courses/94-95/1/ce414-2/resources/root/Text%20Books/Automata/John%20E.%20Hopcroft,%20Rajeev%20Motwani,%20Jeffrey%20D.%20Ullman-Introduction%20to%20Automata%20Theory,%20Languages,%20and%20Computations-Prentice%20Hall%20(2006).pdf" target="_blank">INTRODUCTION TO
-          Automata Theory,
-          Languages, and
-          Computation
-          3rd Edition</a>
-      </div>
-      <div class="col-sm-6" style="height: 200px;">
-        <h1 style="font-size: 33px;">Author</h1>
-        <a style="font-size: 22px;" href="https://github.com/fatihmehmetergin" target="_blank">Fatih Mehmet Ergin | GitHub</a>
-      </div>
-    
-    
-    
+				
+					</p>
+					
+
+				  	
+					<hr />
+						
+				<h2 id=title></h2>
+				
+				w = <input id=input type=text value=ddpdd
+				  onChange="test()"> &emsp;
+				F = <input id=final type=text value=B,D
+				  onChange="test()" style="width:150px">
+				
+				<pre id=out></pre>
+				
+				<hr />
+				
+				<pre id=sample></pre>
+				
+				<hr />
+				
+
+
+			</center>
+
+	
+	<script>
+			"use strict";
+function delta(q, c) { 
+if (q=='A' && c=='d') return 'B'
+if (q=='B' && c=='d') return 'B'
+ if (q=='B' && c=='p') return 'C' 
+if (q=='C' && c=='d') return 'D'
+if (q=='D' && c=='d') return 'D'
+				
+return '';}
+			
+function accept(w, F='B,D', q='A') {
+//w: input String
+ //F: final state(s)
+//q: current state
+let i = 0, txt = q
+while (i < w.length) {
+q = delta(q, w[i])
+if (q == '') break
+i++; txt += " -> "+q }
+input.selectionStart = i
+input.selectionEnd = i+1
+let a = (q!='' && F.includes(q))
+return txt+'  '+(a? "Accept" : "Reject")}
+				
+	
+			function test() {
+				let w = input.value, s = "  "
+				for (let c of w) s += c+"    "
+				s += '\n'+accept(w, final.value)
+				console.log(s); out.innerHTML = s}
+			
+				title.innerText = document.title
+				sample.innerText = delta+'\n'+accept
+				test()
+				
+			</script>
+	<h1 style="font-size: 33px;">Reference</h1>
+	<a style="font-size: 22px;" href="http://ce.sharif.edu/courses/94-95/1/ce414-2/resources/root/Text%20Books/Automata/John%20E.%20Hopcroft,%20Rajeev%20Motwani,%20Jeffrey%20D.%20Ullman-Introduction%20to%20Automata%20Theory,%20Languages,%20and%20Computations-Prentice%20Hall%20(2006).pdf" target="_blank">INTRODUCTION TO
+		Automata Theory,
+		Languages, and
+		Computation
+		3rd Edition</a><br>
+		<a style="font-size: 22px;" href="https://www.mdpi.com/" target="_blank">
+			Mdpi.com
+			</a><br>
+		<a style="font-size: 22px;" href="https://www.mdpi.com/books/pdfview/book/1164" target="_blank">
+			Multiple-Criteria
+			Decision Making 
+			(MCDM) Techniques 
+			for Business 
+			Processes Information 
+			Management</a><br>
+
+</div>
+<div class="col-sm-6" style="height: 200px;">
+	<h1 style="font-size: 33px;">Author</h1>
+	<a style="font-size: 22px;" href="https://github.com/fatihmehmetergin" target="_blank">Fatih Mehmet Ergin | GitHub</a>
+</div>
+
 </body>
 </html>
-
-
-
-
-
-
-
