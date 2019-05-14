@@ -1,4 +1,3 @@
-#Automata Theory
 
 <h2 id="classworks">Classworks</h2>
 
