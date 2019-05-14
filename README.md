@@ -1,5 +1,5 @@
 
-      <h1 id="automata-theory">Automata Theory</h1>
+     <h1>Automata Theory</h1>
 
 <h2 id="classworks">Classworks</h2>
 
@@ -30,5 +30,4 @@
 
 <p>1.<a href="https://fatihmehmetergin.github.io/otomata/TermProject.html">Deterministic Finite Automata</a></p>
 
-<h2 id="links">Links</h2>
-<p><a href="https://github.com/ahmetihsansavas/otomata">github</a></p>
+
