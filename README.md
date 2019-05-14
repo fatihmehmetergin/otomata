@@ -1,5 +1,4 @@
-
-     <h1>Automata Theory</h1>
+#Automata Theory
 
 <h2 id="classworks">Classworks</h2>
 
