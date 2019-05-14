@@ -4,7 +4,7 @@
 
 <h2 id="classworks">Classworks</h2>
 
-<p>1.<a href="https://ahmetihsansavas.github.io/otomata/cw1.html">Deterministic Finite Automata</a></p>
+<p>1.<a href="https://fatihmehmetergin.github.io/otomata/cw1.html">Deterministic Finite Automata</a></p>
 
 <p>2.<a href="https://ahmetihsansavas.github.io/otomata/cw2.html">Non-Deterministic Finite Automata</a></p>
 
