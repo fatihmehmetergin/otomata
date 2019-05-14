@@ -1,3 +1,6 @@
+<h2>Term Project</h2>
+
+<p><a href="https://fatihmehmetergin.github.io/otomata/TermProject.html">Deterministic Finite Automata</a></p>
 
 <h2 id="classworks">Classworks</h2>
 
@@ -24,8 +27,6 @@
 
 <p>3.<a href="https://ahmetihsansavas.github.io/otomata/hw3/microJ1.html">Microj1</a></p>
 
-<h2>Term Project</h2>
 
-<p><a href="https://fatihmehmetergin.github.io/otomata/TermProject.html">Deterministic Finite Automata</a></p>
 
 
