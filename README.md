@@ -27,6 +27,6 @@
 
 <h2>Term Project</h2>
 
-<p>1.<a href="https://fatihmehmetergin.github.io/otomata/TermProject.html">Deterministic Finite Automata</a></p>
+<p><a href="https://fatihmehmetergin.github.io/otomata/TermProject.html">Deterministic Finite Automata</a></p>
 
 
