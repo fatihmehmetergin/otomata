@@ -6,7 +6,7 @@
 
 <p>1.<a href="https://fatihmehmetergin.github.io/otomata/cw1.html">Deterministic Finite Automata</a></p>
 
-<p>2.<a href="https://ahmetihsansavas.github.io/otomata/cw2.html">Non-Deterministic Finite Automata</a></p>
+<p>2.<a href="https://fatihmehmetergin.github.io/otomata/cw2.html">Non-Deterministic Finite Automata</a></p>
 
 <p>3.<a href="https://fatihmehmetergin.github.io/otomata/Class_W3.html">Regular Expression</a></p>
 
