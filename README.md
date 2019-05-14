@@ -10,11 +10,11 @@
 
 <p>3.<a href="https://fatihmehmetergin.github.io/otomata/Class_W3.html">Regular Expression</a></p>
 
-<p>4.<a href="https://ahmetihsansavas.github.io/otomata/cw4.html">Context Free Gramers</a></p>
+<p>4.<a href="https://fatihmehmetergin.github.io/otomata/cw4.html">Context Free Gramers</a></p>
 
 <p>5.<a href="https://fatihmehmetergin.github.io/otomata/Expression.html">Expression</a></p>
 
-<p>6.<a href="https://ahmetihsansavas.github.io/otomata/cw6.html">Push Down Automata</a></p>
+<p>6.<a href="https://fatihmehmetergin.github.io/otomata/cw6.html">Push Down Automata</a></p>
 
 <p>7.<a href="https://fatihmehmetergin.github.io/otomata/cw7/cw7/microJ3.html">microj3</a></p>
 
